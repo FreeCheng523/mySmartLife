@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">小仪表</string>
+    <string name="setlight" tools:ignore="ResourceName">亮度调节</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">亮度自动调节</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">主题选择</string>
+    <string name="time_travel" tools:ignore="ResourceName">时空穿越</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">量子星云</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">星轨矩阵</string>
+    <string name="show_mode" tools:ignore="ResourceName">显示模式</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">自动</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">浅色</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">深色</string>
+    <string name="module_app" tools:ignore="ResourceName">小仪表</string>
+    <string name="app_name" tools:ignore="ResourceName">小仪表</string>
+</resources>

@@ -1,0 +1,17 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Bảng đồng hồ Nhỏ</string>
+    <string name="setlight" tools:ignore="ResourceName">Điều chỉnh Độ sáng</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Điều chỉnh Độ sáng Tự động</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Lựa chọn Chủ đề</string>
+    <string name="time_travel" tools:ignore="ResourceName">Du hành Ngân hà</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Tinh vân Lượng tử</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Quỹ đạo Ma trận</string>
+    <string name="show_mode" tools:ignore="ResourceName">Chế độ Hiển thị</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Tự động</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Sáng</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Tối</string>
+    <string name="module_app" tools:ignore="ResourceName">Bảng đồng hồ Nhỏ</string>
+</resources>

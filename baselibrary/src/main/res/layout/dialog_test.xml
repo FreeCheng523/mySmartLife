@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_margin="32dp"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="测试对话框"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- 描述 -->
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="对话框描述"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <!-- 控制按钮 -->
+    <Button
+        android:id="@+id/enable_background_blur_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="窗口背景模糊: 关闭"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/enable_behind_blur_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="后方屏幕模糊: 关闭"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/adjust_radius_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="调整模糊半径"
+        android:textSize="14sp" />
+
+    <!-- 关闭按钮 -->
+    <Button
+        android:id="@+id/close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:text="关闭"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Painel de Instrumentos Pequeno</string>
+    <string name="setlight" tools:ignore="ResourceName">Regulação de Brilho</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Regulação Automática de Brilho</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Seleção de Tema</string>
+    <string name="time_travel" tools:ignore="ResourceName">Viagem Galáctica</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Nebulosa Quântica</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Órbita Matrix</string>
+    <string name="show_mode" tools:ignore="ResourceName">Modo de Visualização</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Auto</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Claro</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Escuro</string>
+    <string name="module_app" tools:ignore="ResourceName">Painel de Instrumentos Pequeno</string>
+</resources>

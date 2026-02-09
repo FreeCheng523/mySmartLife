@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_layout"
+    android:layout_width="810px"
+    android:layout_height="135px"
+    android:background="@drawable/tips_bg2"
+    android:orientation="vertical"
+    android:paddingStart="35px"
+    android:paddingEnd="35px"
+    android:paddingTop="50px">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置LED灯颜色需先长按妥妥贴5-10秒进入返控模式"
+        android:textColor="#EDEEEF"
+        android:textSize="32px"/>
+
+</LinearLayout>

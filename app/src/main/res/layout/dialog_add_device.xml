@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_out_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toast_content_container"
+        android:layout_width="@dimen/dp_960"
+        android:layout_height="@dimen/dp_560"
+        android:background="@drawable/bg_dialog_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/toast_device_connecting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在搜索附近设备，请耐心等待"
+            android:textSize="@dimen/sp_48"
+            android:layout_marginTop="@dimen/dp_118.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <TextView
+            android:id="@+id/toast_device_connecting_text1"
+            android:layout_width="@dimen/dp_800"
+            android:layout_height="wrap_content"
+            android:text="请勿关闭设备，如果连接的是蓝牙设备,\n请将设备置于配对模式并保持设备在车内"
+            android:gravity="center"
+            android:textSize="@dimen/sp_40"
+            android:layout_marginStart="@dimen/dp_80"
+            android:layout_marginEnd="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_225.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_400"
+            android:background="@color/divided_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/toast_device_disconnect_text_bottom"
+            android:layout_width="@dimen/dp_960"
+            android:layout_height="@dimen/dp_160"
+            android:gravity="center"
+            android:text="取消搜索"
+            android:textSize="@dimen/sp_40"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

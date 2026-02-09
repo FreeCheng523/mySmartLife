@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 普通对话框样式（不透明） -->
+    <style name="BaseLib_BaseDialogStyle" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <!--        修复全屏时状态栏变黑-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--        是否允许背景模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--        背景模糊透明度-->
+        <item name="android:backgroundDimAmount">0.4</item>
+        <!--        不透明窗口-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--        是否浮在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--        是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- 窗口背景模糊对话框样式（半透明） -->
+    <style name="BaseLib_BaseDialogStyle_Blur" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <!--        修复全屏时状态栏变黑-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--        是否允许背景模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--        背景模糊透明度-->
+        <item name="android:backgroundDimAmount">0.4</item>
+        <!--        半透明窗口 - 支持窗口背景模糊-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--        是否浮在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--        是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- 透明Activity主题 -->
+    <style name="BaseLib_TransparentActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>

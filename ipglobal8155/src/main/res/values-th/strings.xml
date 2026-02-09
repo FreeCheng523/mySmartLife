@@ -1,0 +1,17 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">หน้าปัดขนาดเล็ก</string>
+    <string name="setlight" tools:ignore="ResourceName">ปรับความสว่าง</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">ปรับความสว่างอัตโนมัติ</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">การเลือกธีม</string>
+    <string name="time_travel" tools:ignore="ResourceName">การเดินทางข้ามกาแล็กซี</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">เนบิวลาควอนตัม</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">วงโคจรเมทริกซ์</string>
+    <string name="show_mode" tools:ignore="ResourceName">โหมดแสดงผล</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">อัตโนมัติ</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">สว่าง</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">มืด</string>
+    <string name="module_app" tools:ignore="ResourceName">หน้าปัดขนาดเล็ก</string>
+</resources>

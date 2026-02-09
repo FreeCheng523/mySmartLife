@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Μικρός Πίνακας Οργάνων</string>
+    <string name="setlight" tools:ignore="ResourceName">Προσαρμογή Φωτεινότητας</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Αυτόματη Προσαρμογή Φωτεινότητας</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Επιλογή Θέματος </string>
+    <string name="time_travel" tools:ignore="ResourceName">Γαλαξιακό Ταξίδι</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName"> Κβαντικό Νεφέλωμα</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName"> Τροχιά Matrix</string>
+    <string name="show_mode" tools:ignore="ResourceName">Λειτουργία Εμφάνισης</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Αυτόματη</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Ανοιχτόχρωμη</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Σκούρα</string>
+    <string name="module_app" tools:ignore="ResourceName">Μικρός Πίνακας Οργάνων</string>
+
+</resources>

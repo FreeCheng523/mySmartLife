@@ -1,0 +1,17 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Liten instrumentpanel</string>
+    <string name="setlight" tools:ignore="ResourceName">Ljusstyrkereglering</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Automatisk ljusstyrkereglering</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Temaval</string>
+    <string name="time_travel" tools:ignore="ResourceName">Rymdresa</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Kvantnebulosa</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Matrix-bana</string>
+    <string name="show_mode" tools:ignore="ResourceName">Visningsläge</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Auto</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Ljus</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Mörk</string>
+    <string name="module_app" tools:ignore="ResourceName">Liten instrumentpanel</string>
+</resources>

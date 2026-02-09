@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_layout"
+    android:layout_width="978px"
+    android:layout_height="238px"
+    android:gravity="center"
+    android:background="@drawable/toast_bg"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toast_message"
+        android:layout_marginBottom="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="40px"
+        android:paddingEnd="40px"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="40px"
+        tools:text="网络连接失" />
+</androidx.appcompat.widget.LinearLayoutCompat>

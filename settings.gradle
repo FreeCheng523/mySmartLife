@@ -1,0 +1,130 @@
+pluginManagement {
+    repositories {
+        maven { url "https://mirrors.cloud.tencent.com/nexus/repository/maven-public/" }
+        maven { url  = uri("https://maven.aliyun.com/repository/public") }
+        maven { url  = uri("https://maven.aliyun.com/repository/google") }
+        maven { url=uri("https://maven.aliyun.com/nexus/content/repositories/google") }
+        maven { url=uri("https://maven.aliyun.com/nexus/content/groups/public") }
+        maven { url=uri("https://maven.aliyun.com/nexus/content/repositories/jcenter")}
+        maven { url=uri("https://mirrors.aliyun.com/maven/") }
+        maven { url =uri("https://maven.aliyun.com/repository/public") }
+        maven { url =uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+        maven { url=uri("https://plugins.gradle.org/m2/") }
+        maven { url 'https://jitpack.io' }
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url "https://mirrors.cloud.tencent.com/nexus/repository/maven-public/" }
+        maven { url  = uri("https://maven.aliyun.com/repository/public") }
+        maven { url  = uri("https://maven.aliyun.com/repository/google") }
+        maven { url=uri("https://maven.aliyun.com/nexus/content/repositories/google") }
+        maven { url=uri("https://maven.aliyun.com/nexus/content/groups/public") }
+        maven { url=uri("https://maven.aliyun.com/nexus/content/repositories/jcenter")}
+        maven { url=uri("https://mirrors.aliyun.com/maven/") }
+        maven { url =uri("https://maven.aliyun.com/repository/public") }
+        maven { url =uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+        maven { url=uri("https://plugins.gradle.org/m2/") }
+        google()
+        mavenCentral()
+        // 如果还有其他 libs 目录，也可以添加
+        flatDir {
+            dirs 'libs/mega_sdk_v3.1_20250416', 'libs', 'libs/tinnove'
+        }
+    }
+}
+
+rootProject.name = "smartlife"
+
+// 定义 VEHICLE_TYPE 数组，从 gradle.properties 读取多个独立属性
+def vehicleTypeArray = []
+// 读取 gradle.properties 文件的辅助函数
+def getProperty = { String key ->
+    def properties = new Properties()
+    def propertiesFile = file("gradle.properties")
+    if (propertiesFile.exists()) {
+        propertiesFile.withInputStream { properties.load(it) }
+        return properties.getProperty(key)
+    }
+    return null
+}
+
+// 先读取所有属性值到临时变量
+def tinnove_8678_d4 = getProperty("tinnove_8678_d4")?.trim()
+if (tinnove_8678_d4) {
+    vehicleTypeArray.add(tinnove_8678_d4)
+}
+
+def tinnove_8155_d3 = getProperty("tinnove_8155_d3")?.trim()
+if (tinnove_8155_d3) {
+    vehicleTypeArray.add(tinnove_8155_d3)
+}
+
+def mega_8155_d3 = getProperty("mega_8155_d3")?.trim()
+if (mega_8155_d3) {
+    vehicleTypeArray.add(mega_8155_d3)
+}
+
+def mega_8155_g3 = getProperty("mega_8155_g3")?.trim()
+if (mega_8155_g3) {
+    vehicleTypeArray.add(mega_8155_g3)
+}
+
+def mega_8295_d4 = getProperty("mega_8295_d4")?.trim()
+if (mega_8295_d4) {
+    vehicleTypeArray.add(mega_8295_d4)
+}
+
+def enable_fragrance = getProperty("enable_fragrance")?.trim()
+
+// 定义全局属性，从数组中获取
+def vehicleTypeValue = getProperty("CURRENT_VEHICLE_TYPE") ?: "none"
+
+// 打印调试信息
+println "vehicleTypeArray: ${vehicleTypeArray}"
+println "vehicleTypeValue: ${vehicleTypeValue}"
+println "vehicleTypeArray size: ${vehicleTypeArray.size()}"
+
+// 验证值是否在数组中
+if (!vehicleTypeArray.isEmpty() && !vehicleTypeArray.contains(vehicleTypeValue)) {
+    throw new GradleException("CURRENT_VEHICLE_TYPE 必须是以下值之一: ${vehicleTypeArray.join(", ")}")
+}
+
+include ':app'
+include ':ipdomestic8295'
+include ':tuotuotie'
+include ':baselibrary'
+include ':TuoTuoTieTinnoveCarImplLibrary'
+include ':tuotuotie_car_interface_library'
+include ':TuoTuoTieMeijiaCarImpLibrary'
+include ':fragrance'
+include ':ipcommon'
+include ':ipdomestic8155'
+include ':ipmegacommon'
+include ':ipglobal8155'
+include ':iptinnove8678'
+include ':iptinnovecommon'
+
+// 在项目加载后设置 rootProject.ext 属性
+gradle.projectsLoaded {
+    gradle.rootProject.ext.tinnove_8678_d4 = tinnove_8678_d4
+    gradle.rootProject.ext.tinnove_8155_d3 = tinnove_8155_d3
+    gradle.rootProject.ext.mega_8155_d3 = mega_8155_d3
+    gradle.rootProject.ext.mega_8155_g3 = mega_8155_g3
+    gradle.rootProject.ext.mega_8295_d4 = mega_8295_d4
+
+    gradle.rootProject.ext.currentVehicleType = vehicleTypeValue
+    gradle.rootProject.ext.enable_fragrance = enable_fragrance
+    println "gradle.rootProject.ext.currentVehicleType: ${gradle.rootProject.ext.currentVehicleType}"
+    println "enable_fragrance: ${enable_fragrance}"
+}

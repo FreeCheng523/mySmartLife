@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Klein instrumentenpaneel</string>
+    <string name="setlight" tools:ignore="ResourceName">Helderheidsaanpassing</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Automatische helderheidsregeling</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Themaselectie</string>
+    <string name="time_travel" tools:ignore="ResourceName">Galactische Reis</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Quantumnevel</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Matrixbaan</string>
+    <string name="show_mode" tools:ignore="ResourceName">Weergavemodus</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Auto</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Licht</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Donker</string>
+    <string name="module_app" tools:ignore="ResourceName">Klein instrumentenpaneel</string>
+
+</resources>

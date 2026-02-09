@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragrance_title">香氛机</string>
+    <string name="fragrance_set_concentration">浓度设置</string>
+    <string name="fragrance_set_fragrance">香型选择</string>
+    <string name="fragrance_light_to_car">座舱氛围灯联动</string>
+    <string name="fragrance_light">氛围灯设置</string>
+    <string name="fragrance_set_light_switch">氛围灯开关</string>
+    <string name="fragrance_set_light_color">氛围灯颜色</string>
+    <string name="fragrance_Light">清香</string>
+    <string name="fragrance_Subtle">淡雅</string>
+    <string name="fragrance_Bold">浓郁</string>
+    <string name="fragrance_name1">香型名称-A</string>
+    <string name="fragrance_name1_percent">100%</string>
+    <string name="fragrance_name2">香型名称-B</string>
+    <string name="fragrance_name2_percent">100%</string>
+    <string name="fragrance_name_null">未识别到香型</string>
+
+</resources>

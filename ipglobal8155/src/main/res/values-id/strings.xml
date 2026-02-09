@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Panel Instrumen Kecil</string>
+    <string name="setlight" tools:ignore="ResourceName">Penyesuaian Kecerahan</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Penyesuaian Kecerahan Otomatis</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Pemilihan Tema</string>
+    <string name="time_travel" tools:ignore="ResourceName">Perjalanan Galaksi</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Nebula Kuantum</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Orbit Matrix</string>
+    <string name="show_mode" tools:ignore="ResourceName">Mode Tampilan</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Otomatis</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Terang</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Gelap</string>
+    <string name="module_app" tools:ignore="ResourceName">Panel Instrumen Kecil</string>
+
+</resources>

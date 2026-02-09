@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:height="@dimen/ip_dp_27">
+        <shape >
+            <corners android:radius="@dimen/ip_dp_15"/>
+            <solid android:color="#000"/>
+            <stroke
+                android:width="1px"
+                android:color="@color/a1_white"/>
+        </shape>
+    </item>
+
+    <item
+        android:id="@android:id/progress"
+        android:height="@dimen/ip_dp_27">
+        <inset
+            android:insetLeft="@dimen/ip_dp_5"
+            android:insetRight="@dimen/ip_dp_2"
+            android:insetTop="@dimen/ip_dp_5"
+            android:insetBottom="@dimen/ip_dp_5"
+           >
+            <clip>
+                <shape>
+                    <corners android:radius="@dimen/ip_dp_15"/>
+                    <gradient
+                        android:angle="0"
+                        android:endColor="@color/seekbar_end"
+                        android:startColor="#575757"/>
+                </shape>
+            </clip>
+        </inset>
+
+    </item>
+</layer-list>

@@ -1,0 +1,4 @@
+adb root
+adb shell disable-verify 100
+adb shell setprop vecentek.model 1
+adb remount

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200px"
+    android:layout_height="200px"
+    android:layout_marginTop="40px"
+    android:layout_marginRight="40px"
+    app:cardBackgroundColor="@color/no_color"
+    app:cardCornerRadius="48px">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_box_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_choose_default">
+
+            <!-- 功能图标 -->
+            <ImageView
+                android:id="@+id/iv_function_icon"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:contentDescription="功能图标"
+                android:layout_marginTop="32px"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/ic_touch_app" />
+
+            <TextView
+                android:id="@+id/tv_function_name_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="1"
+                android:layout_marginTop="98px"
+                android:textColor="@color/text_primary"
+                android:textSize="20px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="主驾" />
+
+            <!-- 功能名称 -->
+            <TextView
+                android:id="@+id/tv_function_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_marginTop="122px"
+                android:maxLines="2"
+                android:text="功能名称"
+                android:textColor="@color/text_primary"
+                android:textSize="32px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="功能名称" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 选中状态指示器 -->
+        <View
+            android:id="@+id/view_selected_indicator"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_selected"
+            android:visibility="gone" />
+
+        <!-- 删除按钮 -->
+        <ImageButton
+            android:id="@+id/btn_delete_function"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|end"
+            android:background="@color/no_color"
+            android:contentDescription="删除功能"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

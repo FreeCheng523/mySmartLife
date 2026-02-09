@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Pieni Mittaristo</string>
+    <string name="setlight" tools:ignore="ResourceName">Kirkkauden Sääto</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Automaattinen Kirkkauden Säätö</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Teeman Valinta</string>
+    <string name="time_travel" tools:ignore="ResourceName">Galaktinen Matka</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Kvanttisumu</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Matrix-Orbita</string>
+    <string name="show_mode" tools:ignore="ResourceName">Näyttötila </string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Auto</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Vaalea</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Tumma</string>
+    <string name="module_app" tools:ignore="ResourceName">Pieni Mittaristo</string>
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="false">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginStart="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_194"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_device_container"
+        android:layout_width="@dimen/dp_320"
+        android:background="@drawable/shape_btn_bg_small"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_178"
+        android:layout_marginEnd="@dimen/dp_326"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/add_device_text_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_device"
+            android:textSize="@dimen/sp_32"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/dp_140"
+            android:layout_marginTop="@dimen/dp_25.5"
+            android:layout_marginBottom="@dimen/dp_25.5"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <ImageView
+            android:id="@+id/add_device_icon_small"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_72"
+            android:layout_marginStart="@dimen/dp_52"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/about1"
+            android:layout_width="@dimen/dp_186"
+            android:layout_height="@dimen/dp_96"
+            android:text="@string/about"
+            android:textSize="@dimen/sp_32"
+            android:textColor="@color/white"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dp_178"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            android:background="@drawable/shape_btn_bg_small"/>
+
+
+    <!--   <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           android:layout_marginTop="@dimen/dp_80"
+           app:layout_constraintTop_toBottomOf="@+id/back_image"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent">
+           <Button
+               android:id="@+id/lightSet"
+               android:text="灯光设置"
+               android:layout_width="@dimen/dp_300"
+               android:layout_height="@dimen/dp_100"/>
+           <Button
+               android:id="@+id/linkSet"
+               android:text="链接设置"
+               android:layout_width="@dimen/dp_300"
+               android:layout_height="@dimen/dp_100"/>
+
+       </LinearLayout>-->
+
+    <FrameLayout
+        android:background="@drawable/shape_btn_bg_small"
+        android:id="@+id/add_device"
+        android:layout_width="@dimen/dp_760"
+        android:layout_height="@dimen/dp_456"
+        android:layout_marginTop="@dimen/dp_444"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/add_device_icon"
+            android:layout_width="@dimen/dp_105"
+            android:layout_height="@dimen/dp_105"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:src="@drawable/ic_add_white" />
+
+        <TextView
+            android:id="@+id/add_device_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_device"
+            android:textSize="@dimen/sp_40"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/dp_74"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            />
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/tv_no_device_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_80"
+        app:layout_constraintTop_toBottomOf="@+id/add_device"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:textSize="@dimen/sp_40"
+            android:id="@+id/home_empty_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_device_tips"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recyclerview"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/dp_100"
+        android:paddingEnd="@dimen/dp_100"
+        app:layout_constraintTop_toBottomOf="@id/add_device_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_36" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

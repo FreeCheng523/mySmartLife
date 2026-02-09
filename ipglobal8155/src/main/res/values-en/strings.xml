@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Small Instrument Cluster</string>
+    <string name="setlight" tools:ignore="ResourceName">Brightness Adjustment</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Auto Brightness Adjustment</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Theme Selection</string>
+    <string name="time_travel" tools:ignore="ResourceName">Galactic Voyage</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Quantum Nebula</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Matrix Orbit</string>
+    <string name="show_mode" tools:ignore="ResourceName">Display Mode</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Auto</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Light</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Dark</string>
+    <string name="module_app" tools:ignore="ResourceName">Small Instrument Cluster</string>
+
+</resources>

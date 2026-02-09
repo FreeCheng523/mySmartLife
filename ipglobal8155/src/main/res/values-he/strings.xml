@@ -1,0 +1,19 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">לוח מחוונים קטן</string>
+    <string name="setlight" tools:ignore="ResourceName">כוונון בהירות</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">כוונון אוטומטי של בהירות</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">בחירת ערכת נושא </string>
+    <string name="time_travel" tools:ignore="ResourceName">מסע גלקטי</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">ערפילית קוונטית</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">מסלול מטריקס</string>
+    <string name="show_mode" tools:ignore="ResourceName">מצב תצוגה</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">אוטומטי</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">בהיר</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">כהה</string>
+    <string name="module_app" tools:ignore="ResourceName">לוח מחוונים קטן</string>
+
+    <!--和Excel自动转换了，字符从右边开始了-->
+</resources>

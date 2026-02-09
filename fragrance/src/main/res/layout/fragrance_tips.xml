@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragrance_tips"
+    android:layout_width="@dimen/dp_700"
+    android:layout_height="@dimen/dp_140"
+    android:background="@drawable/fragrance_tips"
+    android:orientation="vertical"
+    android:paddingStart="30px"
+    android:paddingEnd="30px"
+    android:paddingTop="31px">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当座舱氛围灯联动开启后，氛围灯颜色跟随车端氛围灯显示，不再支持自定义"
+        android:textColor="#EDEEEF"
+        android:textSize="32px"
+        android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+</LinearLayout>

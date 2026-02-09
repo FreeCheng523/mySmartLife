@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BatteryView">
+        <attr name="batteryLevel" format="integer"/>
+        <attr name="lowBatteryImage" format="reference" />
+        <attr name="mediumBatteryImage" format="reference" />
+        <attr name="highBatteryImage" format="reference" />
+    </declare-styleable>
+</resources>

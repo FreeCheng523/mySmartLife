@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 滚动条 thumb，底部内凹 100 dp -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ip_scrollbar_thumb"
+    android:insetBottom="@dimen/ip_dp_50" />
+
+

@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="ip_switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumbTint">@color/swith_thumb_tint_day</item>
+        <item name="android:trackTint">@color/swith_track_tint_day</item>
+        <item name="android:textColor">@color/swith_text_color_day</item>
+    </style>
+
+</resources>

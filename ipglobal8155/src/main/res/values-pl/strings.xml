@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Mała deska rozdzielcza</string>
+    <string name="setlight" tools:ignore="ResourceName">Regulacja jasności</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Automatyczna regulacja jasności</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Wybór motywu</string>
+    <string name="time_travel" tools:ignore="ResourceName">Podróż przez Galaktykę</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Mgławica Kwantowa</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Orbita Matrix</string>
+    <string name="show_mode" tools:ignore="ResourceName">Tryb wyświetlania</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Auto</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Jasny</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Ciemny</string>
+    <string name="module_app" tools:ignore="ResourceName">Mała deska rozdzielcza</string>
+
+</resources>

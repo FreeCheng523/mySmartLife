@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WuTongCarTest 功能测试"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 状态显示 -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="等待初始化..."
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:background="#ffffff"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:minHeight="48dp"
+        android:gravity="center_vertical" />
+
+    <!-- 滚动视图包含所有测试按钮 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 车身控制功能 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="车身控制功能"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#444444"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_test_trunk_press"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试后备箱开关-关闭"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_trunk_on"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试后备箱开关-开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_child_lock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试儿童锁"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_child_left_open"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试儿童锁左-开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_child_left_lock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试儿童锁左-关闭"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_child_right_open"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试儿童锁右-开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_child_right_lock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试儿童锁右-关闭"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_spoiler"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试尾翼-开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_spoiler_close"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试尾翼-关闭"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_mirror_fold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试后视镜折叠"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btn_test_mirror_expand"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试后视镜展开"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#4CAF50" />
+
+            <!-- 座椅功能 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="座椅功能"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#444444"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_test_steering_heat_on"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试方向盘加热开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_test_steering_heat_off"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试方向盘加热关闭"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_test_driver_seat_heat"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试主驾座椅加热"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_test_passenger_seat_heat"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试副驾座椅加热"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_test_driver_seat_vent"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试主驾座椅通风"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_test_passenger_seat_vent"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试副驾座椅通风"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_test_passenger_seat_adjust"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试副驾座椅调节"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#2196F3" />
+
+            <!-- 空调系统 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="空调系统"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#444444"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_test_ac"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试空调开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_ac_close"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试空调关闭"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_fan_face"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试通风模式-吹脸"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_fan_face_foot"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试通风模式-吹脸/吹脚"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_fan_foot"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试通风模式-吹脚"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_fan_defrost_front"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试通风模式-前除霜"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_fan_defrost_rear"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试通风模式-后除霜"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_hvac_temp_set"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试空调温度设置"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_hvac_temp_adjust"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试空调温度调节"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF9800" />
+
+            <Button
+                android:id="@+id/btn_test_fan_speed"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试风量调节"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FF9800" />
+
+            <!-- 驾驶模式 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="驾驶模式"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#444444"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_test_driving_mode"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试驾驶模式-Normal"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_driving_mode_eco"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试驾驶模式-ECO"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_driving_mode_sport"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试驾驶模式-Sport"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_driving_mode_custom1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试驾驶模式-自定义1"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_driving_mode_special2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试驾驶模式-专属模式2"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_driving_mode_custom3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试驾驶模式-自定义3"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_energy_mgmt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试能量管理-市区模式"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_energy_mgmt_long_distance"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试能量管理-长途模式"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_energy_mgmt_mountain"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试能量管理-山地模式"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_energy_mgmt_emergency"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试能量管理-应急模式"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_energy_mgmt_parking"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试能量管理-驻车模式"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#9C27B0" />
+
+            <Button
+                android:id="@+id/btn_test_energy_mgmt_super_race"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试能量管理-Super Race"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#9C27B0" />
+
+            <!-- 音响系统 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="音响系统"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#444444"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_test_low_speed_radar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试低速行车雷达提醒"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#607D8B" />
+
+            <!-- 安全系统 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="安全系统"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#444444"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_test_rear_belt_warning_on"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试后排安全带未系提醒开启"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E91E63" />
+
+            <Button
+                android:id="@+id/btn_test_rear_belt_warning_off"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="测试后排安全带未系提醒关闭"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#E91E63" />
+
+            <!-- 全部测试按钮 -->
+            <Button
+                android:id="@+id/btn_test_all"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="运行所有测试"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/ip_dp_1202"
+        android:layout_height="@dimen/ip_dp_721"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ip_dp_120"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/exit"
+                android:layout_width="@dimen/ip_dp_48"
+                android:layout_height="@dimen/ip_dp_48"
+                android:layout_marginStart="@dimen/ip_dp_36"
+                android:layout_marginTop="@dimen/ip_dp_36"
+                android:src="@drawable/icon_close"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ip_title"
+                android:textSize="@dimen/ip_sp_36"
+                android:textColor="@color/white"
+                android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 添加NestedScrollView作为滚动容器 -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ip_dp_601"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fillViewport="true"
+            android:paddingRight="@dimen/ip_dp_18"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/ip_scrollbar_thumb"
+            android:scrollbarSize="@dimen/ip_dp_8">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/ip_dp_789"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <TextView
+                        android:id="@+id/brightnessTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setlight"
+                        android:textSize="@dimen/ip_sp_30"
+                        android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_20"/>
+                    <TextView
+                        android:id="@+id/autoBrightnessTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_auto_light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ip_sp_30"
+                        android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_20"
+                        app:layout_constraintEnd_toStartOf="@+id/autoBrightnessSwitch"/>
+
+                    <ImageView
+                        android:id="@+id/autoBrightnessSwitch"
+                        android:layout_width="@dimen/ip_dp_89"
+                        android:layout_height="@dimen/ip_dp_72"
+                        android:clickable="true"
+                        android:src="@drawable/switch_off"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <!--整个thump的高度为进度条的高度-->
+                    <SeekBar
+                        android:id="@+id/brightnessSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ip_dp_91"
+                        app:layout_constraintTop_toBottomOf="@id/autoBrightnessSwitch"
+                        android:layout_marginTop="@dimen/ip_dp_6"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:min="@string/value_low"
+                        android:max="@string/value_high"
+                        android:progress="60"
+                        android:splitTrack="false"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/bg_adjust_seek_bar"/>
+
+                    <TextView
+                        android:id="@+id/value_low"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_160"
+                        android:text="@string/value_low"
+                        android:textSize="@dimen/ip_sp_18"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+                    <TextView
+                        android:id="@+id/value_high"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_160"
+                        android:text="@string/value_high"
+                        android:textSize="@dimen/ip_sp_18"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                        />
+
+                    <TextView
+                        android:id="@+id/themeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_224"
+                        android:text="@string/theme_choose"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ip_sp_30"
+                        android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/theme_radio_button"
+                        app:layout_constraintTop_toBottomOf="@id/themeTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="@dimen/ip_dp_223"
+                            android:layout_height="@dimen/ip_dp_169"
+                            android:id="@+id/them_1"
+                            android:layout_gravity="left">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/time_travel" />
+                            <ImageView
+                                android:id="@+id/theme_apper_img1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/theme_bg" />
+                            <ImageView
+                                android:layout_width="@dimen/ip_dp_63"
+                                android:layout_height="@dimen/ip_dp_63"
+                                android:id="@+id/theme_radio_img1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="@dimen/ip_dp_87"
+                                android:layout_marginStart="@dimen/ip_dp_178"
+                                android:src="@drawable/theme_checked_circle" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="@dimen/ip_dp_223"
+                            android:layout_height="@dimen/ip_dp_169"
+                            android:id="@+id/them_3"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/star_track_matrix" />
+                            <ImageView
+                                android:id="@+id/theme_apper_img3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <ImageView
+                                android:id="@+id/theme_radio_img3"
+                                android:layout_width="@dimen/ip_dp_63"
+                                android:layout_height="@dimen/ip_dp_63"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="@dimen/ip_dp_87"
+                                android:layout_marginStart="@dimen/ip_dp_178"
+                                android:src="@drawable/theme_unchecked_circle" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="@dimen/ip_dp_223"
+                            android:layout_height="@dimen/ip_dp_169"
+                            android:id="@+id/them_2"
+                            android:layout_gravity="right">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/quantum_nebula" />
+                            <ImageView
+                                android:id="@+id/theme_apper_img2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <ImageView
+                                android:id="@+id/theme_radio_img2"
+                                android:layout_width="@dimen/ip_dp_63"
+                                android:layout_height="@dimen/ip_dp_63"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="@dimen/ip_dp_87"
+                                android:layout_marginStart="@dimen/ip_dp_178"
+                                android:src="@drawable/theme_unchecked_circle" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/themeTextPart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/theme_radio_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_12">
+                        <TextView
+                            android:layout_width="@dimen/ip_dp_223"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="left"
+                            android:textColor="@color/white"
+                            android:text="@string/time_travel"
+                            android:textSize="@dimen/ip_sp_27"/>
+                        <TextView
+                            android:layout_width="@dimen/ip_dp_223"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:text="@string/star_track_matrix"
+                            android:textSize="@dimen/ip_sp_27"/>
+                        <TextView
+                            android:layout_width="@dimen/ip_dp_223"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="right"
+                            android:textColor="@color/white"
+                            android:text="@string/quantum_nebula"
+                            android:textSize="@dimen/ip_sp_27"/>
+                    </FrameLayout>
+                    <!-- 显示模式部分 -->
+                    <TextView
+                        android:id="@+id/displayModeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/themeTextPart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_39"
+                        android:text="@string/show_mode"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ip_sp_30" />
+
+                    <RadioGroup
+                        android:id="@+id/displayModeRadioGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/ip_dp_72"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/displayModeTextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="@dimen/ip_dp_62"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/ip_dp_8"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/show_mode_shape">
+
+                        <RadioButton
+                            android:id="@+id/autoRadioButton"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/ip_dp_60"
+                            android:layout_weight="1"
+                            android:background="@drawable/ip_mode_radio_button"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                            android:textColor="@color/show_mode_textcolor"
+                            android:text="@string/show_mode_auto"
+                            android:textSize="@dimen/ip_sp_24" />
+
+                        <RadioButton
+                            android:id="@+id/lightRadioButton"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/ip_dp_60"
+                            android:layout_weight="1"
+                            android:background="@drawable/ip_mode_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:textColor="@color/show_mode_textcolor"
+                            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                            android:text="@string/show_mode_light"
+                            android:textSize="@dimen/ip_sp_24" />
+
+                        <RadioButton
+                            android:id="@+id/darkRadioButton"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/ip_dp_60"
+                            android:layout_weight="1"
+                            android:background="@drawable/ip_mode_radio_button"
+                            android:button="@null"
+                            android:textColor="@color/show_mode_textcolor"
+                            android:gravity="center"
+                            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                            android:text="@string/show_mode_deep"
+                            android:textSize="@dimen/ip_sp_24" />
+                    </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <!-- 新增底部渐变蒙层 -->
+        <View
+            android:id="@+id/bottom_mask"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ip_dp_200"
+            android:background="@drawable/ip_bottom_gradient_mask"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

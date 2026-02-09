@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toast_content_container"
+        android:layout_width="@dimen/dp_960"
+        android:layout_height="@dimen/dp_650"
+        android:background="@drawable/bg_dialog_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="权限提示"
+            android:textSize="@dimen/sp_48"
+            android:layout_marginTop="@dimen/dp_118.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <TextView
+            android:id="@+id/tips_content"
+            android:layout_width="@dimen/dp_800"
+            android:layout_height="wrap_content"
+            android:text="您未授权蓝牙扫描权限、蓝牙连接权限，使用深蓝互联应用时，需要通过蓝牙搜索、连接设备，若需继续使用，请卸载后重装应用，应用重装后请授权蓝牙权限。"
+            android:gravity="center"
+            android:textSize="@dimen/sp_40"
+            android:layout_marginStart="@dimen/dp_80"
+            android:layout_marginEnd="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_225.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_480"
+            android:background="@color/divided_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/confirm_btn"
+            android:layout_width="@dimen/dp_960"
+            android:layout_height="@dimen/dp_160"
+            android:gravity="center"
+            android:text="知道了"
+            android:textSize="@dimen/sp_40"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

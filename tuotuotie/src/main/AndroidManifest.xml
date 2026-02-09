@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zkjd.lingdong">
+
+
+    <!-- 旧版本蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <!-- 位置权限（Android 6-11需要） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+    <!-- 新版本蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"  android:usesPermissionFlags="neverForLocation"  tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    
+    <!-- 前台服务权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!--从 Android 14 开始，Google 要求开发者明确声明前台服务的具体用途，而不是使用通用的 FOREGROUND_SERVICE 权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" 
+        tools:targetApi="34" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 查询应用包权限 -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    
+    <!-- BLE功能声明 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 车载媒体控制权限 -->
+    <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_VOLUME" />
+    <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 添加后台启动Activity的权限 -->
+    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 悬浮窗权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 车载功能需要的权限 -->
+   <uses-permission android:name="android.car.permission.CAR_CONTROL" />
+   <uses-permission android:name="android.car.permission.CAR_INFO" />
+
+    <!-- 美嘉权限 -->
+    <!--空调温度-->
+    <uses-permission android:name="mega.car.permission.CLIMATE" />
+    <!--后备箱开启-->
+    <uses-permission android:name="mega.car.permission.ENTRY_LOCK" />
+    <!--能量模式-->
+    <uses-permission android:name="mega.car.permission.CAR_DRIVING" />
+    <!--尾翼控制-->
+    <uses-permission android:name="mega.car.permission.EXTRA" />
+    <!--低速告警-->
+    <uses-permission android:name="mega.car.permission.VEHICLE_MOTION" />
+    <!--小憩模式-->
+    <uses-permission android:name="mega.car.permission.INFOTAINMENT" />
+    <!--后视镜折叠-->
+    <uses-permission android:name="mega.car.permission.CARCABIN" />
+    <!--雨刮开关-->
+    <uses-permission android:name="mega.car.permission.VEHICLE_BODY" />
+
+    <!--方向盘加热-->
+    <uses-permission android:name="mega.car.permission.COMFORTS_SETTINGS" />
+    <uses-permission android:name="mega.car.permission.RECEIVE_IGNITION_STATE" />
+    <application>
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LingDong2"
+            android:excludeFromRecents="true">
+        <!--    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".ui.function_kotlin.AppSelectionActivity" />
+
+        <activity android:name=".ui.test.MeijiaCarFunctionTestActivity"/>
+        
+        <activity android:name=".ui.test.TestWTActivity"
+            android:exported="true"
+            android:label="WuTongCarTest功能测试"/>
+
+        <service
+            android:name=".service.BleService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+            
+        <!-- 添加开机启动广播接收器 -->
+        <receiver
+            android:name=".receiver.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="mega.intent.action.VEHICLE_IGNITION_ON" />
+                <action android:name="mega.intent.action.VEHICLE_IGNITION_OFF" />
+            </intent-filter>
+        </receiver>
+            
+    </application>
+
+</manifest>

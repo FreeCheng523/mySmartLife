@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--高斯模糊Dialog-->
+    <style name="IPBlurDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!--控制窗口（非背景透明度，修改背景中的颜色值：CC 1A）-->
+        <item name="android:windowBackground">@drawable/ip_bg_dialog_view</item>
+        <!--windowIsTranslucent:使对话框窗口半透明，允许背景内容部分可见。-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--移除对话框的标题栏（无标题对话框）-->
+        <item name="windowNoTitle">true</item>
+        <!--移除对话框的边框（无边框对话框）。-->
+        <item name="android:windowFrame">@null</item>
+        <!--对话框以浮动形式显示（覆盖在Activity上方）-->
+        <item name="android:windowIsFloating">true</item>
+        <!--禁用对话框的默认动画效果（无动画）-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!-- 启用模糊背景 -->
+        <item name="android:windowBlurBehindEnabled" tools:ignore="NewApi">true</item>
+        <!--启用背景变暗效果（配合backgroundDimAmount使用）-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 增加背景变暗程度，增强模糊对比度:backgroundDimAmount值越大，背景越暗 -->
+        <!--<item name="android:backgroundDimAmount">0.5</item>-->
+        <!--设置背景模糊半径（仅适用于支持背景模糊的系统，如Android 12+-->
+        <item name="android:windowBackgroundBlurRadius" tools:ignore="NewApi">30dp</item>
+        <item name="android:windowBlurBehindRadius" tools:ignore="NewApi">30dp</item>
+    </style>
+
+    <style name="ip_switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumbTint">@color/swith_thumb_tint_day</item>
+        <item name="android:trackTint">@color/swith_track_tint_day</item>
+        <item name="android:textColor">@color/swith_text_color_day</item>
+    </style>
+
+</resources>

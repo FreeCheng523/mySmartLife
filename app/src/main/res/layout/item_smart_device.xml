@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <FrameLayout
+            android:id="@+id/device"
+            android:layout_width="@dimen/dp_760"
+            android:layout_height="@dimen/dp_456"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/shape_btn_bg"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <View
+                    android:id="@+id/mask1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <ImageView
+                    android:id="@+id/device_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/icon_tuotuo" />
+
+                <ImageView
+                    android:id="@+id/device_menu"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_672"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/icon_menu_more"
+                    android:background="@drawable/circle_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
+                <ImageView
+                    android:id="@+id/power_off"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_588"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/power_off"
+                    android:background="@drawable/circle_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    />
+
+                <!-- 电量  -->
+                <com.deepal.ivi.hmi.smartlife.utils.BatteryView
+                    android:id="@+id/batteryView"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_26"
+                    app:batteryLevel="75"
+                    app:highBatteryImage="@drawable/battery60"
+                    app:lowBatteryImage="@drawable/battery10"
+                    app:mediumBatteryImage="@drawable/battery20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                />
+
+                <TextView
+                    android:id="@+id/device_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_371.98"
+                    android:layout_marginStart="@dimen/dp_48"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="妥妥贴_L12138"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/sp_40"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+                <LinearLayout
+                    android:id="@+id/device_is_connect_lin"
+                    android:layout_width="@dimen/dp_168"
+                    android:layout_height="@dimen/dp_64"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_367.98"
+                    android:layout_marginStart="@dimen/dp_568"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/device_is_connect_text"
+                        android:layout_width="@dimen/dp_96"
+                        android:layout_height="@dimen/dp_48"
+                        android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                        android:layout_gravity="center"
+                        android:text="未连接"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_32" />
+                    <ImageView
+                        android:id="@+id/device_is_connect_image"
+                        android:layout_width="@dimen/dp_64"
+                        android:layout_height="@dimen/dp_64"
+                        android:src="@drawable/icon_ble"
+                        android:layout_marginStart="@dimen/dp_8"
+                        />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

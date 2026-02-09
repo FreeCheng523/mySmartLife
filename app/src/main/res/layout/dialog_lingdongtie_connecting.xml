@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_content_container"
+        android:layout_width="@dimen/dp_960"
+        android:layout_height="@dimen/dp_560"
+        android:background="@drawable/bg_dialog_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 妥妥贴图标 -->
+        <ImageView
+            android:id="@+id/iv_lingdongtie_icon"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_60"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/connectfail1" />
+
+        <!-- 连接状态文本 -->
+        <TextView
+            android:id="@+id/tv_connecting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在连接妥妥贴"
+            android:textSize="@dimen/sp_48"
+            android:layout_marginTop="@dimen/dp_40"
+            app:layout_constraintTop_toBottomOf="@id/iv_lingdongtie_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <!-- 连接提示文本 -->
+        <TextView
+            android:id="@+id/tv_connecting_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请确保妥妥贴设备已开启并处于可连接状态"
+            android:textSize="@dimen/sp_40"
+            android:layout_marginTop="@dimen/dp_30"
+            app:layout_constraintTop_toBottomOf="@id/tv_connecting_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <!-- 进度指示器 -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_40"
+            app:layout_constraintTop_toBottomOf="@id/tv_connecting_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:indeterminateTint="@color/white" />
+
+        <!-- 分割线 -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_400"
+            android:background="@color/divided_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 取消按钮 -->
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/dp_960"
+            android:layout_height="@dimen/dp_160"
+            android:gravity="center"
+            android:text="取消连接"
+            android:textSize="@dimen/sp_40"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

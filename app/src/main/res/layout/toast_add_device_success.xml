@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toast_out_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toast_content_container"
+        android:layout_width="@dimen/dp_960"
+        android:layout_height="@dimen/dp_560"
+        android:background="@drawable/bg_dialog_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/toast_back_image"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_30"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/toast_add_success_image"
+            android:layout_width="@dimen/dp_104"
+            android:layout_height="@dimen/dp_104"
+            android:layout_marginTop="@dimen/dp_72"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/connectsuccess" />
+
+        <TextView
+            android:id="@+id/toast_add_success_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备已连接"
+            android:textSize="@dimen/sp_40"
+            android:layout_marginTop="@dimen/dp_216"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+        <TextView
+            android:id="@+id/toast_add_success_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5s"
+            android:textSize="@dimen/sp_40"
+            android:textColor="#30C5FF"
+            app:layout_constraintBottom_toTopOf="@id/toast_look_up_device"
+            android:layout_marginBottom="@dimen/dp_76"
+            android:layout_marginStart="@dimen/dp_320"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+        <TextView
+            android:id="@+id/toast_add_success_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="后自动关闭弹窗"
+            android:textSize="@dimen/sp_40"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/toast_look_up_device"
+            android:layout_marginBottom="@dimen/dp_76"
+            android:layout_marginStart="@dimen/dp_370"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <!-- 分割线 -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divided_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp_160" />
+
+
+        <TextView
+            android:id="@+id/toast_look_up_device"
+            android:layout_width="@dimen/dp_960"
+            android:layout_height="@dimen/dp_160"
+            android:gravity="center"
+            android:text="查看设备"
+            android:textSize="@dimen/sp_40"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

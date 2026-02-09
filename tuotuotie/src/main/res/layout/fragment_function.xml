@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 顶部固定区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 防误触开关区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="end|center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="防误触"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginEnd="8dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchPreventAccidental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!--    相对布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160px">
+
+            <TextView
+                android:id="@+id/title_center"
+                android:layout_weight="1"
+                android:layout_width="600px"
+                android:layout_marginStart="500px"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="妥妥贴"
+                android:textSize="40px"
+                android:textColor="#ffffff"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="1400px"
+            android:layout_height="45px"
+            android:layout_marginBottom="24px"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/buttonPoint1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:textColor="#99FFFFFF"
+                android:text="短按：无"
+                android:textSize="32px"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/buttonPoint2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="#99FFFFFF"
+                android:gravity="center"
+                android:text="双击：无"
+                android:textSize="32px"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/buttonPoint3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="#99FFFFFF"
+                android:gravity="center"
+                android:text="旋转：无"
+                android:textSize="32px"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <!-- 当前选择的功能卡片 -->
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:layout_width="1400px"
+            android:layout_height="45px"
+            android:layout_marginBottom="24px"
+            android:layout_gravity="center"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- 功能图标 -->
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_function_icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_background"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_touch_app"
+                    android:contentDescription="功能图标" />
+
+                <!-- 功能信息 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45px"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tvButtonTypeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="短按功能"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tvFunctionName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未设置功能"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+
+                </LinearLayout>
+
+                <!-- 清除按钮 -->
+                <ImageButton
+                    android:id="@+id/btnClearFunction"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_clear"
+                    android:contentDescription="清除功能"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 按钮类型选择区域 -->
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择按键类型"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="24px" />
+
+        <!-- 按钮选项卡      -->
+        <LinearLayout
+            android:id="@+id/tabContainer"
+            android:background="@drawable/button_tab_bg"
+            android:layout_width="1400px"
+            android:layout_height="96px"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:padding="8px">
+
+            <TextView
+                android:id="@+id/tab1"
+                android:layout_width="0dp"
+                android:layout_height="80px"
+                android:layout_marginEnd="16px"
+                android:layout_weight="1"
+                android:background="@drawable/tab_button_selector"
+                android:gravity="center"
+                android:textSize="32px"
+                android:textStyle="bold"
+                android:text="短按"
+                android:textColor="@drawable/tab_text_color"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/tab2"
+                android:layout_width="0dp"
+                android:layout_height="80px"
+                android:layout_marginEnd="16px"
+                android:layout_weight="1"
+                android:background="@drawable/tab_button_selector"
+                android:gravity="center"
+                android:textSize="32px"
+                android:textStyle="bold"
+                android:text="双击"
+                android:textColor="@drawable/tab_text_color"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/tab3"
+                android:layout_width="0dp"
+                android:layout_height="80px"
+                android:layout_weight="1"
+                android:background="@drawable/tab_button_selector"
+                android:gravity="center"
+                android:textSize="32px"
+                android:textStyle="bold"
+                android:text="旋转"
+                android:textColor="@drawable/tab_text_color"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:background="@drawable/button_tab_bg"
+            android:id="@+id/rvButtonTypes"
+            android:layout_width="1400px"
+            android:layout_gravity="center"
+            android:layout_height="96px"
+            android:layout_marginBottom="24px"
+            tools:listitem="@layout/item_button_type" />
+
+        <!-- 功能选择标题 -->
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择功能"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+
+    <!--    相对布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="610px">
+
+    <!-- 底部可滚动区域 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="center"
+            android:id="@+id/rvFunctionGrid"
+            android:layout_marginTop="0px"
+            android:layout_width="1480px"
+            android:paddingLeft="40px"
+            android:layout_height="610px"
+            android:layout_marginStart="60px"
+            tools:listitem="@layout/item_function_grid" />
+        <View
+            android:layout_marginTop="0px"
+            android:layout_marginStart="2px"
+            android:layout_width="1596px"
+            android:layout_height="40px"
+            android:background="@drawable/gradient_black_to_transparent" />
+    </RelativeLayout>
+
+</LinearLayout>

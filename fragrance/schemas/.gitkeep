@@ -1,0 +1,6 @@
+# Room Database Schemas
+# 
+# 此目录用于存储Room自动生成的数据库schema JSON文件
+# Room编译时会自动生成版本对应的schema文件（如1.json、2.json等）
+# 这些文件需要提交到版本控制，便于AutoMigration功能正常工作
+

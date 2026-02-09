@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.deepal.ivi.hmi.instrumentpanel">
+
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="mega.car.permission.ECU" />
+    <uses-permission android:name="mega.car.permission.EXTRA" />
+    <uses-permission android:name="mega.car.permission.CAR_DRIVING" />
+    <uses-permission android:name="mega.car.permission.CERT" />
+    <uses-permission android:name="mega.car.permission.LIGHTING" />
+    <!-- 添加前台服务权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="30"
+        android:configChanges="uiMode|screenSize|orientation">
+        <service
+            android:name="com.deepal.ivi.hmi.ipvehiclecommon.service.MonitorService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="connectedDevice"
+            tools:ignore="ForegroundServicePermission">
+        </service>
+    </application>
+
+</manifest>

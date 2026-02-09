@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.function_kotlin.AppSelectionFragment">
+
+    <!-- 搜索框 -->
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:layout_width="1320px"-->
+    <!--        android:layout_height="88px"-->
+    <!--        android:background="@drawable/app_search_bg"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        app:startIconDrawable="@drawable/app_search_icon">-->
+
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/et_search"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="搜索应用"-->
+    <!--            android:textSize="24px"-->
+    <!--            android:textColor="#66ffffff"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:inputType="tex t" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!-- 最简洁的搜索框 -->
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="1320px"
+        android:layout_height="88px"
+        android:hint="搜索应用"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24px"
+        android:textColor="#99FFFFFF"
+        android:paddingStart="22px"
+        android:background="@drawable/app_search_bg"
+        android:maxLines="1"
+        android:drawablePadding="12px"
+        android:drawableLeft="@drawable/app_search_icon_resized"
+        android:drawableTint="#666666"
+        android:layout_marginBottom="10px"
+        android:inputType="text" />
+
+    <!-- 应用列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_app_list"
+        android:layout_width="1440px"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_app_grid"
+       />
+
+    <!-- 空状态提示 -->
+    <LinearLayout
+        android:id="@+id/layout_empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="80px" />
+
+        <!-- 2. 图本身 -->
+        <ImageView
+            android:id="@+id/null1"
+            android:layout_width="435px"
+            android:layout_height="277px"
+            android:background="@drawable/ic_null" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="36px" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未搜索到相关应用，请确认深蓝互联+\n已获取查询所有应用权限且所搜索应用已安装"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>

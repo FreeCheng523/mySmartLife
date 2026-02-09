@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/null_device_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toast_content_container"
+        android:layout_width="@dimen/dp_960"
+        android:layout_height="@dimen/dp_560"
+        android:background="@drawable/bg_dialog_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/null_device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索完毕，未搜索到设备"
+            android:textSize="@dimen/sp_48"
+            android:layout_marginTop="@dimen/dp_118.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+
+        <TextView
+            android:id="@+id/null_device_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请检查设备及网络状态"
+            android:textSize="@dimen/sp_40"
+            android:layout_marginTop="@dimen/dp_225.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/divided_line"
+            android:layout_marginTop="@dimen/dp_400"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/searching_again"
+            style="@style/restore"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_160"
+            android:text="重新搜索"
+            android:textSize="@dimen/sp_40"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/searching_close"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <View
+            android:id="@+id/button_divider"
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/divided_line"
+            app:layout_constraintBottom_toBottomOf="@id/searching_again"
+            app:layout_constraintEnd_toStartOf="@+id/searching_close"
+            app:layout_constraintStart_toEndOf="@id/searching_again"
+            app:layout_constraintTop_toTopOf="@id/searching_again" />
+
+        <TextView
+            android:id="@+id/searching_close"
+            style="@style/exit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_160"
+            android:text="关闭"
+            android:textSize="@dimen/sp_40"
+            android:textColor="#959595"
+            app:layout_constraintStart_toEndOf="@id/searching_again"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

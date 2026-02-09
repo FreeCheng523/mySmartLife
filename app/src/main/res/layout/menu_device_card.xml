@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 删除设备按钮 -->
+        <TextView
+            android:id="@+id/menu_delete"
+            style="@style/BlurButton"
+            android:text="删除设备"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_36"
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_96"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"/>
+
+        <!-- 断开连接按钮  -->
+        <TextView
+            android:id="@+id/menu_disconnect"
+            style="@style/BlurButton"
+            android:text="断开连接"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_36"
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_96"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            android:visibility="gone"/>
+
+        <!-- 设备重命名按钮 -->
+        <TextView
+            android:id="@+id/menu_rename"
+            style="@style/BlurButton"
+            android:text="设备重命名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_36"
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_96"
+            android:gravity="center"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            android:visibility="gone"/>
+    </LinearLayout>
+</FrameLayout>

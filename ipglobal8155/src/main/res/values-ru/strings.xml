@@ -1,0 +1,17 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Маленькая комбинация приборов</string>
+    <string name="setlight" tools:ignore="ResourceName">Регулировка яркости</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Автоматическая регулировка яркости</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Выбор темы</string>
+    <string name="time_travel" tools:ignore="ResourceName">Галактическое путешествие</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Квантовая туманность</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Матричная орбита</string>
+    <string name="show_mode" tools:ignore="ResourceName">Режим отображения</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Авто</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Светлый</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Темный</string>
+    <string name="module_app" tools:ignore="ResourceName">Маленькая комбинация приборов</string>
+</resources>

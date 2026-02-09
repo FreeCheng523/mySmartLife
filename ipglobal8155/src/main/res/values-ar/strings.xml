@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">لوحة عدادات صغيرة</string>
+    <string name="setlight" tools:ignore="ResourceName">ضبط السطوع</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">ضبط سطوع تلقائي</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">اختيار السمة</string>
+    <string name="time_travel" tools:ignore="ResourceName">رحلة مجرية</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">سديم كمي</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">مدار المصفوفة</string>
+    <string name="show_mode" tools:ignore="ResourceName">وضع العرض</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">تلقائي</string>
+    <string name="show_mode_light" tools:ignore="ResourceName"> فاتح</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">غامق</string>
+    <string name="module_app" tools:ignore="ResourceName">لوحة عدادات صغيرة</string>
+
+</resources>

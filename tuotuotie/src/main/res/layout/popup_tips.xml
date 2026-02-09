@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_layout"
+    android:layout_width="1300px"
+    android:layout_height="140px"
+    android:background="@drawable/tips_bg1"
+    android:orientation="vertical"
+    android:paddingStart="30px"
+    android:paddingEnd="30px"
+    android:paddingTop="31px">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1、设置防误触开关需先长按妥妥贴5-10秒\n2、可避免车辆颠簸时使用“妥妥贴”旋钮误触或重复操作，提升操控准确性。"
+        android:textColor="#EDEEEF"
+        android:textSize="32px"/>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="d4_white">#4dFFFFFF</color>
+    <color name="d0_white">#0DFFFFFF</color>
+    <color name="a1_white">#1AFFFFFF</color>
+
+    <color name="nest_view">#1AFFFFFF</color>
+    <color name="seekbar_end">#FFFFFFFF</color>
+    <color name="seekbar_start">#FF959595</color>
+
+    <color name="swith_thumb_tint_day">#FFFFFFFF</color>
+    <color name="swith_track_tint_day">#138FF0</color>
+    <color name="transparent_bg">#80138FF0</color> <!-- 50% 透明度 -->
+    <color name="swith_text_color_day">#F6F3F3</color>
+    <color name="choose_progress_radio">#5096CE</color>
+    <color name="unchoose_progress_radio">#757D83</color>
+
+
+    <color name="dialog_background">#B3000000</color>
+    <color name="seek_progress_mark_color">#67686B</color>
+
+    <color name="selected_text_color">#FF4081</color>
+
+    <!--显示模式-->
+    <color name="show_mode_radio_text_color">#171834</color>
+
+
+
+</resources>

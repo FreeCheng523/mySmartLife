@@ -1,0 +1,17 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Küçük Gösterge</string>
+    <string name="setlight" tools:ignore="ResourceName">Parlaklık Ayarı</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Otomatik Parlaklık Ayarı</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Tema Seçimi </string>
+    <string name="time_travel" tools:ignore="ResourceName">Galaktik Yolculuk</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Kuantum Bulutsusu</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Matrix Yörünge</string>
+    <string name="show_mode" tools:ignore="ResourceName">Görüntü Modu</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Otomatik</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Açık</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Koyu</string>
+    <string name="module_app" tools:ignore="ResourceName">Küçük Gösterge</string>
+</resources>

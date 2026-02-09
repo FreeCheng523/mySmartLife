@@ -1,0 +1,45 @@
+plugins {
+    alias(libs.plugins.android.library)
+}
+
+android {
+    namespace 'com.deepal.ivi.hmi.ipvehiclecommon'
+    compileSdk 36
+
+    defaultConfig {
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        resValue "string", "currentVehicleType",
+                rootProject.ext.has('currentVehicleType') ?
+                        rootProject.ext.currentVehicleType : "none"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation project(':ipcommon')
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation name: 'carlib-new-1.0.2.918-175cb6c', ext: 'aar'
+    implementation name: 'controller-lib-release_v3.1_20250417', ext: 'aar'
+    implementation name: 'MLog-1.0.1.13-78dbef5', ext: 'aar'
+    implementation name: 'bigsur-car-lib-release', ext: 'aar'
+    implementation name: 'smartlifemiddleware-release', ext: 'aar'
+    implementation name: 'nexus-static-1.236.3.0-4e910b2', ext: 'jar'
+}

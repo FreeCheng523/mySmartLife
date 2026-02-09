@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="@dimen/dp_1600"
+        android:layout_height="@dimen/dp_960"
+        android:layout_gravity="center"
+
+        android:background="@drawable/bg_dialog_view">
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_marginStart="@dimen/dp_56"
+            android:layout_marginTop="@dimen/dp_56"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_60"
+            android:text="@string/user_agreement_title"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- WebView 容器：固定高度 506dp，水平居中 -->
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="@dimen/dp_1440"
+            android:layout_height="@dimen/dp_506"
+            android:layout_marginTop="@dimen/dp_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <com.deepal.ivi.hmi.smartlife.windowview.CustomScrollBottomWebView
+                android:id="@+id/wvView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+            <!-- 底部半透明虚化蒙层 -->
+            <View
+                android:layout_width="@dimen/dp_1360"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/fade_out_gradient" />
+
+        </FrameLayout>
+
+        <!-- 复选框：紧贴 WebView 下方 20dp -->
+        <CheckBox
+            android:id="@+id/cb_user_agree"
+            android:layout_width="@dimen/dp_84"
+            android:layout_height="@dimen/dp_84"
+            android:layout_marginStart="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/checkbox_gray"
+            android:button="@null"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fl_content" />
+
+
+        <!-- 复选框文字：与 CheckBox 垂直居中 -->
+        <TextView
+            android:id="@+id/tv_have_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:includeFontPadding="false"
+            android:text="@string/user_agreement_have_read"
+            android:textColor="@color/white"
+            android:textSize="28px"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/cb_user_agree"
+            app:layout_constraintStart_toEndOf="@id/cb_user_agree"
+            app:layout_constraintTop_toTopOf="@id/cb_user_agree" />
+
+        <!-- 复选框与按钮之间的分割线 -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@color/divided_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_user_agree" />
+
+        <!-- 同意按钮 -->
+        <TextView
+            android:id="@+id/tv_agree"
+            style="@style/restore"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            android:gravity="center"
+            android:text="@string/user_agreement_agree"
+            android:textColor="#959595"
+            android:textSize="40px"
+            app:layout_constraintEnd_toStartOf="@id/button_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <!-- 按钮之间分割线 -->
+        <View
+            android:id="@+id/button_divider"
+            android:layout_width="1px"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/divided_line"
+            app:layout_constraintBottom_toBottomOf="@id/tv_agree"
+            app:layout_constraintEnd_toStartOf="@+id/tv_exit"
+            app:layout_constraintStart_toEndOf="@id/tv_agree"
+            app:layout_constraintTop_toTopOf="@id/tv_agree" />
+
+
+        <!-- 退出按钮 -->
+        <TextView
+            android:id="@+id/tv_exit"
+            style="@style/exit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+            android:gravity="center"
+            android:text="@string/user_agreement_exit"
+            android:textColor="#959595"
+            android:textSize="40px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_divider"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,286 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "4480bb435a38104a3bba71ac7661b0f3",
+    "entities": [
+      {
+        "tableName": "fragrance_device",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`macAddress` TEXT NOT NULL, `deviceName` TEXT NOT NULL, `displayName` TEXT NOT NULL, `connectionState` TEXT NOT NULL, `powerState` INTEGER NOT NULL, `mode` INTEGER NOT NULL, `gear` INTEGER NOT NULL, `carStartStopEnabled` INTEGER NOT NULL, `carStartStopCycle` INTEGER NOT NULL, `lightMode` INTEGER NOT NULL, `lightColor` TEXT NOT NULL, `lightBrightness` INTEGER NOT NULL, `programVersion` INTEGER NOT NULL, `deviceStatus` INTEGER NOT NULL, `timingDuration` INTEGER NOT NULL, `batteryLevel` INTEGER NOT NULL, `needAutoConnect` INTEGER NOT NULL, `syncLightBrightness` INTEGER NOT NULL, `slotAFragranceName` TEXT, `slotBFragranceName` TEXT, `lightSwitch` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `reservedString1` TEXT, `reservedString2` TEXT, `reservedString3` TEXT, `reservedString4` TEXT, `reservedString5` TEXT, `reservedString6` TEXT, `reservedString7` TEXT, `reservedString8` TEXT, `reservedString9` TEXT, `reservedString10` TEXT, `reservedInt1` INTEGER, `reservedInt2` INTEGER, `reservedInt3` INTEGER, `reservedInt4` INTEGER, `reservedInt5` INTEGER, `reservedInt6` INTEGER, `reservedInt7` INTEGER, `reservedInt8` INTEGER, `reservedInt9` INTEGER, `reservedInt10` INTEGER, PRIMARY KEY(`macAddress`))",
+        "fields": [
+          {
+            "fieldPath": "macAddress",
+            "columnName": "macAddress",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceName",
+            "columnName": "deviceName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "displayName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "connectionState",
+            "columnName": "connectionState",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "powerState",
+            "columnName": "powerState",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mode",
+            "columnName": "mode",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gear",
+            "columnName": "gear",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "carStartStopEnabled",
+            "columnName": "carStartStopEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "carStartStopCycle",
+            "columnName": "carStartStopCycle",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lightMode",
+            "columnName": "lightMode",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lightColor",
+            "columnName": "lightColor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lightBrightness",
+            "columnName": "lightBrightness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programVersion",
+            "columnName": "programVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceStatus",
+            "columnName": "deviceStatus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timingDuration",
+            "columnName": "timingDuration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "batteryLevel",
+            "columnName": "batteryLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "needAutoConnect",
+            "columnName": "needAutoConnect",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncLightBrightness",
+            "columnName": "syncLightBrightness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slotAFragranceName",
+            "columnName": "slotAFragranceName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "slotBFragranceName",
+            "columnName": "slotBFragranceName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lightSwitch",
+            "columnName": "lightSwitch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reservedString1",
+            "columnName": "reservedString1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString2",
+            "columnName": "reservedString2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString3",
+            "columnName": "reservedString3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString4",
+            "columnName": "reservedString4",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString5",
+            "columnName": "reservedString5",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString6",
+            "columnName": "reservedString6",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString7",
+            "columnName": "reservedString7",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString8",
+            "columnName": "reservedString8",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString9",
+            "columnName": "reservedString9",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedString10",
+            "columnName": "reservedString10",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt1",
+            "columnName": "reservedInt1",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt2",
+            "columnName": "reservedInt2",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt3",
+            "columnName": "reservedInt3",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt4",
+            "columnName": "reservedInt4",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt5",
+            "columnName": "reservedInt5",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt6",
+            "columnName": "reservedInt6",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt7",
+            "columnName": "reservedInt7",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt8",
+            "columnName": "reservedInt8",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt9",
+            "columnName": "reservedInt9",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservedInt10",
+            "columnName": "reservedInt10",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "macAddress"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4480bb435a38104a3bba71ac7661b0f3')"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="ip_title">Malý Přístrojový Panel</string>
+    <string name="setlight" tools:ignore="ResourceName">Nastavení Jasnosti</string>
+    <string name="set_auto_light" tools:ignore="ResourceName">Automatické Nastavení Jasnosti</string>
+    <string name="value_low" tools:ignore="ResourceName">20</string>
+    <string name="value_default" tools:ignore="ResourceName">60%</string>
+    <string name="value_high" tools:ignore="ResourceName">100</string>
+    <string name="theme_choose" tools:ignore="ResourceName">Výběr Motivu</string>
+    <string name="time_travel" tools:ignore="ResourceName">Galaktická Cesta</string>
+    <string name="star_track_matrix" tools:ignore="ResourceName">Kvantová Mlhovina</string>
+    <string name="quantum_nebula" tools:ignore="ResourceName">Dráha Matrixu</string>
+    <string name="show_mode" tools:ignore="ResourceName">Režim Zobrazení</string>
+    <string name="show_mode_auto" tools:ignore="ResourceName">Automatický</string>
+    <string name="show_mode_light" tools:ignore="ResourceName">Světlý</string>
+    <string name="show_mode_deep" tools:ignore="ResourceName">Tmavý</string>
+    <string name="module_app" tools:ignore="ResourceName">Malý Přístrojový Panel</string>
+
+</resources>

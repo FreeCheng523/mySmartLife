@@ -1,0 +1,5 @@
+---
+alwaysApply: false
+---
+1.当我说实现某某接口的时候，如果这个接口位于tuotuotie_interface_library中的，则在TuoTuoTieMeijiaCarImpLibrary
+和TuoTuoTieTinnoveCarImplLibrary 中分别实现这个接口

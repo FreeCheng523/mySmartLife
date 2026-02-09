@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toast_out_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toast_content_container"
+            android:layout_width="@dimen/dp_960"
+            android:layout_height="@dimen/dp_560"
+            android:background="@drawable/bg_dialog_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/confirm_delete_device_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认删除该设备？"
+                android:textSize="@dimen/sp_48"
+                android:layout_marginTop="@dimen/dp_166"
+                android:textColor="@color/white"
+                android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- 分割线 -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divided_line"
+                android:layout_marginTop="@dimen/dp_166"
+                app:layout_constraintTop_toBottomOf="@id/confirm_delete_device_title" />
+
+            <!-- 确认按钮 -->
+            <TextView
+                android:id="@+id/confirm_delete_yes"
+                style="@style/restore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="确认"
+                android:textSize="@dimen/sp_40"
+                android:textColor="@color/white"
+                android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                android:layout_marginTop="@dimen/dp_39"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:layout_constraintEnd_toStartOf="@+id/confirm_delete_no" />
+
+            <!-- 按钮之间的分割线 -->
+            <View
+                android:id="@+id/button_divider"
+                android:layout_width="2px"
+                android:layout_height="0dp"
+                android:background="@color/divided_line"
+                app:layout_constraintTop_toTopOf="@id/confirm_delete_yes"
+                app:layout_constraintBottom_toBottomOf="@id/confirm_delete_yes"
+                app:layout_constraintStart_toEndOf="@id/confirm_delete_yes"
+                app:layout_constraintEnd_toStartOf="@+id/confirm_delete_no" />
+
+            <!-- 取消按钮 -->
+            <TextView
+                android:id="@+id/confirm_delete_no"
+                style="@style/exit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="@dimen/sp_40"
+                android:textColor="#959595"
+                android:fontFamily="@font/deepal_fz_variable_yjh_l2"
+                android:layout_marginTop="@dimen/dp_39"
+                android:layout_marginStart="@dimen/dp_10"
+                app:layout_constraintStart_toEndOf="@id/confirm_delete_yes"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

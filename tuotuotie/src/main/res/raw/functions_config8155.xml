@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+    <!-- usetype[0] 1:按钮 2：旋钮 3：车型-->
+    <!-- usetype[1] 1:梧桐车标配 2：梧桐需要配置字判断是否有的功能-->
+    <!-- usetype[2] 1:镁佳车标配 2：镁佳车需要配置字判断是否有的功能-->
+    <!--config_word 梧桐+镁佳 -->
+    <!-- 第一行功能：后备箱/关、儿童锁开/关、方向盘加热开/关、开启应用 -->
+
+
+    <function>
+        <id>trunk_toggle</id>
+        <name>背门</name>
+        <icon>ic_trunk</icon>
+        <ustype>112</ustype>
+        <category>CAR</category>
+        <action_code>CAR_TRUNK_TOGGLE</action_code>
+        <config_word>ELECTRIC_TAILGATE</config_word>
+    </function>
+
+    <function>
+        <id>child_lock_toggle</id>
+        <name>儿童锁</name>
+        <icon>ic_child_lock</icon>
+        <ustype>100</ustype>
+        <category>CAR</category>
+        <action_code>CAR_CHILD_LOCK_TOGGLE1</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>child_lock_toggle1</id>
+        <name>左儿童锁</name>
+        <icon>ic_child_lock1</icon>
+        <ustype>101</ustype>
+        <category>CAR</category>
+        <action_code>CAR_CHILD_LOCK_TOGGLE1</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>child_lock_toggle2</id>
+        <name>右儿童锁</name>
+        <icon>ic_child_lock2</icon>
+        <ustype>101</ustype>
+        <category>CAR</category>
+        <action_code>CAR_CHILD_LOCK_TOGGLE2</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+    
+    <function>
+        <id>steering_wheel_heat_toggle</id>
+        <name>方向盘加热</name>
+        <icon>ic_steering_wheel_heating</icon>
+        <ustype>102</ustype>
+        <category>CAR</category>
+        <action_code>CAR_STEERING_WHEEL_HEAT_TOGGLE</action_code>
+        <config_word>STEERING_HEAT</config_word>
+    </function>
+    
+
+    
+    <!-- 第二行功能：主驾、副驾、二排左、二排右 -->
+<!--    <function>-->
+<!--        <id>main_seat_toggle</id>-->
+<!--        <name>主驾车门</name>-->
+<!--        <icon>ic_main_seat</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_MAIN_SEAT_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>copilot_seat_toggle</id>-->
+<!--        <name>副驾车门</name>-->
+<!--        <icon>ic_copilot_seat</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_COPILOT_SEAT_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>left_rear_seat_toggle</id>-->
+<!--        <name>二排左车门</name>-->
+<!--        <icon>ic_left_rear_seat</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_LEFT_REAR_SEAT_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>right_rear_seat_toggle</id>-->
+<!--        <name>二排右车门</name>-->
+<!--        <icon>ic_right_rear_seat</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_RIGHT_REAR_SEAT_TOGGLE</action_code>-->
+<!--    </function>-->
+    
+    <!-- 第三行功能：主驾休息、副驾休息、主驾座椅加热、副驾座椅加热 -->
+<!--    <function>-->
+<!--        <id>main_seat_rest_toggle</id>-->
+<!--        <name>主驾休息</name>-->
+<!--        <icon>ic_main_seat_rest</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_MAIN_SEAT_REST_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>copilot_seat_rest_toggle</id>-->
+<!--        <name>副驾休息</name>-->
+<!--        <icon>ic_copilot_seat_rest</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_COPILOT_SEAT_REST_TOGGLE</action_code>-->
+<!--    </function>-->
+    
+    <function>
+        <id>main_seat_heat_toggle</id>
+        <name>主驾|座椅加热</name>
+        <icon>ic_main_seat_heat</icon>
+        <ustype>112</ustype>
+        <category>CAR</category>
+        <action_code>CAR_MAIN_SEAT_HEAT_TOGGLE</action_code>
+        <config_word>DRIVERSEAT_HEAT</config_word>
+    </function>
+    
+    <function>
+        <id>copilot_seat_heat_toggle</id>
+        <name>副驾|座椅加热</name>
+        <icon>ic_copilot_seat_heat</icon>
+        <ustype>112</ustype>
+        <category>CAR</category>
+        <action_code>CAR_COPILOT_SEAT_HEAT_TOGGLE</action_code>
+        <config_word>DRIVERSEAT_VENT</config_word>
+    </function>
+    
+    <!-- 第四行功能：二排左按摩、二排右按摩、二排左通风、二排右通风 -->
+<!--    <function>-->
+<!--        <id>left_rear_massage_toggle</id>-->
+<!--        <name>二排左按摩</name>-->
+<!--        <icon>ic_left_rear_massage</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_LEFT_REAR_MASSAGE_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>right_rear_massage_toggle</id>-->
+<!--        <name>二排右按摩</name>-->
+<!--        <icon>ic_right_rear_massage</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_RIGHT_REAR_MASSAGE_TOGGLE</action_code>-->
+<!--    </function>-->
+    
+    <function>
+        <id>left_rear_vent_toggle</id>
+        <name>主驾|座椅通风</name>
+        <icon>ic_left_rear_vent</icon>
+        <ustype>112</ustype>
+        <category>CAR</category>
+        <action_code>CAR_LEFT_REAR_VENT_TOGGLE</action_code>
+        <config_word>PASSENGERSEAT_HEAT</config_word>
+    </function>
+
+    <function>
+        <id>right_rear_vent_toggle</id>
+        <name>副驾|座椅通风</name>
+        <icon>ic_right_rear_vent</icon>
+        <ustype>112</ustype>
+        <category>CAR</category>
+        <action_code>CAR_RIGHT_REAR_VENT_TOGGLE</action_code>
+        <config_word>PASSENGERSEAT_VENT</config_word>
+    </function>
+    
+    <!-- 第五行功能：冰箱、冰箱制冷、冰箱制热、尾厢控制 -->
+<!--    <function>-->
+<!--        <id>fridge_toggle</id>-->
+<!--        <name>冰箱</name>-->
+<!--        <icon>ic_fridge</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_FRIDGE_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>fridge_cooling</id>-->
+<!--        <name>冰箱制冷</name>-->
+<!--        <icon>ic_fridge_cooling</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_FRIDGE_COOLING</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>fridge_heating</id>-->
+<!--        <name>冰箱制热</name>-->
+<!--        <icon>ic_fridge_heating</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_FRIDGE_HEATING</action_code>-->
+<!--    </function>-->
+    
+<!--    <function>-->
+<!--        <id>trunk_control_toggle</id>-->
+<!--        <name>尾厢控制</name>-->
+<!--        <icon>ic_trunk_control</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_TRUNK_CONTROL_TOGGLE</action_code>-->
+<!--    </function>-->
+    
+    <!-- 第六行功能：智慧大灯隐藏控制、车载云台相机拍照、车载云台相机录像、车机屏幕重启 -->
+<!--    <function>-->
+<!--        <id>smart_light_toggle</id>-->
+<!--        <name>智慧大灯隐藏控制</name>-->
+<!--        <icon>ic_smart_light</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_SMART_LIGHT_TOGGLE</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>car_camera_photo</id>-->
+<!--        <name>车载云台相机拍照</name>-->
+<!--        <icon>ic_car_camera_photo</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_CAMERA_PHOTO</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>car_camera_video</id>-->
+<!--        <name>车载云台相机录像</name>-->
+<!--        <icon>ic_car_camera_video</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_CAMERA_VIDEO</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>car_screen_restart</id>-->
+<!--        <name>车机屏幕重启</name>-->
+<!--        <icon>ic_car_screen_restart</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_SCREEN_RESTART</action_code>-->
+<!--    </function>-->
+    
+    <!-- 第七行功能：音量调节、音乐切换、空调温度、空调风量（这些都是旋钮功能，可以双向调节） -->
+
+    <function>
+        <id>ac_wind_direction</id>
+        <name>吹风方向</name>
+        <icon>ic_ac_wind_direction</icon>
+        <ustype>111</ustype>
+        <category>CAR</category>
+        <action_code>CAR_AC_WIND_DIRECTION</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>defrost1</id>
+        <name>前除雾除霜</name>
+        <icon>ic_before</icon>
+        <ustype>111</ustype>
+        <category>CAR</category>
+        <action_code>CAR_DEFROST1</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>defrost2</id>
+        <name>后除雾除霜</name>
+        <icon>ic_after</icon>
+        <ustype>111</ustype>
+        <category>CAR</category>
+        <action_code>CAR_DEFROST2</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>air_conditioning</id>
+        <name>空调</name>
+        <icon>ic_air_conditioning</icon>
+        <ustype>111</ustype>
+        <category>CAR</category>
+        <action_code>CAR_AIR_CONDITIONING</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>launch_app</id>
+        <name>开启应用</name>
+        <icon>ic_launch_app</icon>
+        <ustype>111</ustype>
+        <category>APP</category>
+        <action_code>LAUNCH_APP</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>play_pause</id>
+        <name>播放/暂停</name>
+        <icon>ic_baseline_play</icon>
+        <ustype>111</ustype>
+        <category>MEDIA</category>
+        <action_code>MEDIA_PLAY_PAUSE</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>mute_toggle</id>
+        <name>静音</name>
+        <icon>ic_mute</icon>
+        <ustype>111</ustype>
+        <category>MEDIA</category>
+        <action_code>MEDIA_MUTE_TOGGLE</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>driving_mode</id>
+        <name>驾驶模式</name>
+        <icon>ic_driving_mode</icon>
+        <ustype>111</ustype>
+        <category>CAR</category>
+        <action_code>CAR_DRIVING_MODE</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>energy_management</id>
+        <name>能量管理</name>
+        <icon>ic_energy_management</icon>
+        <ustype>102</ustype>
+        <category>CAR</category>
+        <action_code>CAR_ENERGY_MANAGEMENT</action_code>
+        <config_word>POWER_MODE</config_word>
+    </function>
+
+    <function>
+        <id>trunk_position</id>
+        <name>尾翼档位</name>
+        <icon>ic_trunk_position</icon>
+        <ustype>122</ustype>
+        <category>CAR</category>
+        <action_code>CAR_TRUNK_POSITION</action_code>
+        <config_word>E_EMPENNAGE</config_word>
+    </function>
+
+    <function>
+        <id>folding_rearview_mirror</id>
+        <name>后视镜折叠</name>
+        <icon>ic_folding_rearview_mirror</icon>
+        <ustype>112</ustype>
+        <category>CAR</category>
+        <action_code>CAR_FOLDING_REARVIEW_MIRROR</action_code>
+        <config_word>MIRROR_FOLD</config_word>
+    </function>
+
+    <function>
+        <id>low_speed_pedestrian</id>
+        <name>低速|行人报警音</name>
+        <icon>ic_low_speed_pedestrian</icon>
+        <ustype>111</ustype>
+        <category>CAR</category>
+        <action_code>CAR_LOW_SPEED_PEDESTRIAN</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>volume_control</id>
+        <name>音量调节</name>
+        <icon>ic_volume_control</icon>
+        <ustype>211</ustype>
+        <category>MEDIA</category>
+        <action_code>MEDIA_VOLUME_CONTROL</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>music_switch</id>
+        <name>音乐切换</name>
+        <icon>ic_music_switch</icon>
+        <ustype>211</ustype>
+        <category>MEDIA</category>
+        <action_code>MEDIA_MUSIC_SWITCH</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+    
+    <function>
+        <id>ac_temperature</id>
+        <name>空调温度</name>
+        <icon>ic_ac_temperature</icon>
+        <ustype>210</ustype>
+        <category>CAR</category>
+        <action_code>CAR_AC_TEMPERATURE</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>ac_temperature1</id>
+        <name>主驾|空调温度</name>
+        <icon>ic_z_air</icon>
+        <ustype>201</ustype>
+        <category>CAR</category>
+        <action_code>CAR_AC_TEMPERATURE1</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+    <function>
+        <id>ac_temperature2</id>
+        <name>副驾|空调温度</name>
+        <icon>ic_f_air</icon>
+        <ustype>201</ustype>
+        <category>CAR</category>
+        <action_code>CAR_AC_TEMPERATURE2</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+    
+    <function>
+        <id>ac_fan_speed</id>
+        <name>空调风量</name>
+        <icon>ic_ac_fan_speed</icon>
+        <ustype>211</ustype>
+        <category>CAR</category>
+        <action_code>CAR_AC_FAN_SPEED</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+    
+    <!-- 第八行功能：空调吹风方向、驾驶模式、能量管理模式、除雾除霜 -->
+
+    
+
+
+    <!-- 第九行功能：中岛移动、冰箱温度调节、按摩挡位、按摩部位 -->
+<!--    <function>-->
+<!--        <id>central_control</id>-->
+<!--        <name>中岛移动</name>-->
+<!--        <icon>ic_central_control</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_CENTRAL_CONTROL</action_code>-->
+<!--    </function>-->
+<!--    -->
+<!--    <function>-->
+<!--        <id>fridge_temperature</id>-->
+<!--        <name>冰箱温度调节</name>-->
+<!--        <icon>ic_fridge_temperature</icon>-->
+<!--        <ustype>2</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_FRIDGE_TEMPERATURE</action_code>-->
+<!--    </function>-->
+    
+<!--    <function>-->
+<!--        <id>massage_intensity</id>-->
+<!--        <name>按摩挡位</name>-->
+<!--        <icon>ic_massage_intensity</icon>-->
+<!--        <ustype>2</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_MASSAGE_INTENSITY</action_code>-->
+<!--    </function>-->
+    
+<!--    <function>-->
+<!--        <id>massage_mode</id>-->
+<!--        <name>按摩部位</name>-->
+<!--        <icon>ic_massage_mode</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_MASSAGE_MODE</action_code>-->
+<!--    </function>-->
+    
+    <!-- 第十行功能：尾厢位置、副驾屏幕开启显示器等 -->
+
+    
+<!--    <function>-->
+<!--        <id>copilot_screen_toggle</id>-->
+<!--        <name>副驾屏幕开度数调节</name>-->
+<!--        <icon>ic_copilot_screen</icon>-->
+<!--        <ustype>1</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_COPILOT_SCREEN_TOGGLE</action_code>-->
+<!--    </function>-->
+
+    <!--新增补全的-->
+
+
+    <function>
+        <id>resting_mode_left</id>
+        <name>主驾|小憩模式</name>
+        <icon>ic_resting_mode_left</icon>
+        <ustype>100</ustype>
+        <category>CAR</category>
+        <action_code>CAR_RESTING_MODE_LEFT</action_code>
+        <config_word>DRIVERSEAT_MEMORY</config_word>
+    </function>
+
+    <function>
+        <id>resting_mode_right</id>
+        <name>副驾|小憩模式</name>
+        <icon>ic_resting_mode_right</icon>
+        <ustype>100</ustype>
+        <category>CAR</category>
+        <action_code>CAR_RESTING_MODE_RIGHT</action_code>
+        <config_word>DRIVERSEAT_MEMORY</config_word>
+    </function>
+
+
+
+
+<!--    <function>-->
+<!--        <id>seat_belt_notfastened</id>-->
+<!--        <name>二排安全带未系提示</name>-->
+<!--        <icon>ic_seat_belt_notfastened</icon>-->
+<!--        <ustype>111</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_SEAT_BELT_NOTFASTENED</action_code>-->
+<!--        <config_word>STANDARD_CONFIG</config_word>-->
+<!--    </function>-->
+
+<!--    <function>-->
+<!--        <id>wiper_mode</id>-->
+<!--        <name>雨刮模式</name>-->
+<!--        <icon>ic_wiper_mode</icon>-->
+<!--        <ustype>112</ustype>-->
+<!--        <category>CAR</category>-->
+<!--        <action_code>CAR_WIPER_MODE</action_code>-->
+<!--    </function>-->
+
+    <function>
+        <id>boss_key</id>
+        <name>老板键</name>
+        <icon>ic_boss_key</icon>
+        <ustype>212</ustype>
+        <category>CAR</category>
+        <action_code>CAR_BOSS_KEY</action_code>
+        <config_word>PASSENGERSEAT_ADJUST</config_word>
+    </function>
+
+
+    <!-- 深蓝车型-->
+<!--    <function>-->
+<!--        <id>s05</id>-->
+<!--        <name>深蓝S05</name>-->
+<!--        <icon>ic_launcher_foreground</icon>-->
+<!--        <ustype>300</ustype>-->
+<!--        <category>CARTYPE</category>-->
+<!--        <action_code>S05</action_code>-->
+<!--        <config_word>STANDARD_CONFIG</config_word>-->
+<!--    </function>-->
+<!--    <function>-->
+<!--        <id>l07</id>-->
+<!--        <name>深蓝L07</name>-->
+<!--        <icon>ic_launcher_foreground</icon>-->
+<!--        <ustype>300</ustype>-->
+<!--        <category>CARTYPE</category>-->
+<!--        <action_code>L07</action_code>-->
+<!--        <config_word>STANDARD_CONFIG</config_word>-->
+<!--    </function>-->
+
+    <function>
+        <id>1</id>
+        <name>灵动</name>
+        <icon>ic_j</icon>
+        <ustype>300</ustype>
+        <category>CARTYPE</category>
+        <action_code>灵动</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+    <function>
+        <id>2</id>
+        <name>水滴</name>
+        <icon>ic_w</icon>
+        <ustype>300</ustype>
+        <category>CARTYPE</category>
+        <action_code>水滴</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+    <function>
+        <id>3</id>
+        <name>气泡</name>
+        <icon>ic_d</icon>
+        <ustype>300</ustype>
+        <category>CARTYPE</category>
+        <action_code>气泡</action_code>
+        <config_word>STANDARD_CONFIG</config_word>
+    </function>
+
+</functions> 

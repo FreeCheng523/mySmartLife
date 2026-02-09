@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!--    透明Activity使用，以做弹窗-->
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <style name="BlurButton"  >
+        <item name="android:windowBackground">@drawable/bg_dialog_view</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:focusable">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackgroundBlurRadius" tools:ignore="NewApi">25dp</item>
+    </style>
+
+    <style name="DriveMode_BaseDialogStyle" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--  <item name="android:windowFullscreen">true</item> -->
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <!--        修复全屏时状态栏变黑-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--        是否允许背景模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--        背景模糊透明度-->
+        <item name="android:backgroundDimAmount">0.2</item>
+        <!--        是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--        是否浮在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--        是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackgroundBlurRadius" tools:ignore="NewApi">40dp</item>
+
+        <!-- <item name="android:background">@android:color/transparent</item>-->
+        <!-- <item name="android:colorBackgroundCacheHint">@null</item>-->
+
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minWidth">@dimen/dp_0</item>
+        <item name="android:minHeight">@dimen/dp_0</item>
+        <item name="android:paddingLeft">@dimen/dp_0</item>
+        <item name="android:paddingRight">@dimen/dp_0</item>
+        <item name="android:paddingTop">@dimen/dp_0</item>
+        <item name="android:paddingBottom">@dimen/dp_0</item>
+        <item name="android:insetTop">@dimen/dp_0</item>
+        <item name="android:insetBottom">@dimen/dp_0</item>
+        <item name="android:letterSpacing">0</item>
+        <!--        <item name="android:backgroundTint">@color/transparent</item>-->
+
+    </style>
+
+    <style name="StateButton">
+        <item name="android:layout_width">@dimen/dp_184</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_btn_confirm</item>
+    </style>
+
+    <style name="CarSeries">
+        <item name="android:layout_width">@dimen/dp_80</item>
+        <item name="android:layout_height">@dimen/dp_24</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_car_series</item>
+    </style>
+
+    <style name="DriveButton">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:background">@drawable/bg_drive_button</item>
+    </style>
+
+    <style name="exit" parent="StateButton">
+        <item name="android:layout_width">@dimen/dp_360</item>
+        <item name="android:layout_height">@dimen/dp_42</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/pop_cancel_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_btn_exit</item>
+    </style>
+
+    <style name="cancel" parent="StateButton">
+        <item name="android:layout_width">479px</item>
+        <item name="android:layout_height">160px</item>
+        <item name="android:textSize">40px</item>
+        <item name="android:textColor">@color/dialog_btn_cancel</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_btn_cancel</item>
+    </style>
+
+    <style name="reset" parent="cancel">
+        <item name="android:textColor">@color/dialog_btn_confirm</item>
+        <item name="android:background">@drawable/bg_btn_reset</item>
+    </style>
+
+    <style name="restore" parent="exit">
+        <item name="android:background">@drawable/bg_btn_restore</item>
+        <item name="android:textColor">@color/pop_bg</item>
+        <item name="android:layout_width">@dimen/dp_360</item>
+        <item name="android:layout_height">@dimen/dp_42</item>
+    </style>
+
+    <!--高斯模糊activity-->
+    <style name="BlurActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@drawable/window_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <!--避免在深色模式下可能出现的渲染问题,以下内容以减少蒙版半径-->
+        <item name="android:windowBackgroundBlurRadius" tools:ignore="NewApi">80dp</item><!--值越大，模糊的越高-->
+        <item name="android:windowBlurBehindRadius" tools:ignore="NewApi">100dp</item>
+        <item name="android:windowBlurBehindEnabled" tools:ignore="NewApi">true</item>
+    </style>
+
+    <!--高斯模糊Dialog-->
+    <style name="BlurDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog_view</item>
+        <!--windowIsTranslucent:使对话框窗口半透明，允许背景内容部分可见。-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--移除对话框的标题栏（无标题对话框）-->
+        <item name="windowNoTitle">true</item>
+        <!--移除对话框的边框（无边框对话框）。-->
+        <item name="android:windowFrame">@null</item>
+        <!--对话框以浮动形式显示（覆盖在Activity上方）-->
+        <item name="android:windowIsFloating">true</item>
+        <!--启用背景变暗效果（配合backgroundDimAmount使用）-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--禁用对话框的默认动画效果（无动画）-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!--设置背景模糊半径（仅适用于支持背景模糊的系统，如Android 12+-->
+        <item name="android:windowBackgroundBlurRadius" tools:ignore="NewApi">40dp</item>
+        <item name="android:windowBlurBehindRadius" tools:ignore="NewApi">40dp</item>
+    </style>
+    <style name="FullScreenDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
